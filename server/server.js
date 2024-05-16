@@ -41,8 +41,7 @@ console.log("Server Port:", process.env.PORT);
 
 //connecting to DB
 mongoose
-.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-// .connect(process.env.URI)
+  .connect(process.env.MONGO_URI, { dbName: process.env.DATABASE_NAME })// .connect(process.env.URI)
   .then(() => {
     //make the server listening on port 4567
     app.listen(process.env.PORT, () => {
