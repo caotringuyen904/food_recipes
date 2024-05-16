@@ -1,15 +1,17 @@
+
 {
-  "version": 2,
-  "builds": [
+  "rewrites": [
     {
-      "src": "./server.js",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
+      "source": "/api/v1/blogs/:path*",
+      "destination": "https://foodblogserver.vercel.app/api/v1/blogs/:path*"
+    },
     {
-      "src": "/(.*)",
-      "dest": "/server.js"
+      "source": "/auth/:path*",
+      "destination": "https://foodblogserver.vercel.app/auth/:path*"
+    },
+    {
+      "source": "/api/:path*",
+      "destination": "https://foodblogserver.vercel.app/api/:path*"
     }
   ]
 }
