@@ -13,13 +13,7 @@ const path = require("path");
 //create the server
 const app = express();
 
-const corsConfig = {
-  origin: "*",
-  credential: true,
-  methods: ["GET", "POST", "PUT", "DELETE"],
-
-app.options("", cors(corsConfig));
-app.use(cors(corsConfig));
+app.use(cors());
 
 //use middleware
 app.use(express.json({ limit: "25mb" }));
