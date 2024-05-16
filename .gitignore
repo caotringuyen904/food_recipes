@@ -1,6 +1,6 @@
-node_modules
-build
+# Ignore .env file in server
+/server/.env
 
-# local env files
-.env*.local
-.env
+# Ignore node_modules folder in both server and client
+/server/node_modules
+/client/node_modules
