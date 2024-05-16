@@ -2,15 +2,15 @@
     "rewrites": [
       {
         "source": "/api/v1/blogs/:path*",
-        "destination": "food-recipes-server-weld.vercel.app/api/v1/blogs/:path*"
+        "destination": "https://food-recipes-server-weld.vercel.app/api/v1/blogs/:path*"
       },
       {
         "source": "/auth/:path*",
-        "destination": "food-recipes-server-weld.vercel.app/auth/:path*"
+        "destination": "https://food-recipes-server-weld.vercel.app/auth/:path*"
       },
       {
         "source": "/api/:path*",
-        "destination": "food-recipes-server-weld.vercel.app/api/:path*"
+        "destination": "https://food-recipes-server-weld.vercel.app/api/:path*"
       }
     ]
   }
