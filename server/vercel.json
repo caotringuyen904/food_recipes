@@ -1,18 +1,15 @@
-
 {
-  "rewrites": [
+  "version": 2,
+  "builds": [
     {
-      "source": "/api/v1/blogs/:path*",
-      "destination": "https://food-recipes-api.vercel.app/api/v1/blogs/:path*"
-    },
+      "src": "./server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
     {
-      "source": "/auth/:path*",
-      "destination": "https://food-recipes-api.vercel.app/auth/:path*"
-    },
-    {
-      "source": "/api/:path*",
-      "destination": "https://food-recipes-api.vercel.app/api/:path*"
+      "src": "/(.*)",
+      "dest": "/server.js"
     }
   ]
 }
-
