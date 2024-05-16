@@ -4,3 +4,4 @@
 # Ignore node_modules folder in both server and client
 /server/node_modules
 /client/node_modules
+
