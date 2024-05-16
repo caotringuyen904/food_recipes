@@ -31,20 +31,12 @@ app.use("/api/v1/reviews", ReviewRoutes);
 app.use(errorHandler);
 
 
-app.get('/favicon.ico', (req, res) => res.status(204));
-
 
 //Error handling middleware
 app.use((error, req, res, next) => {
   res.status(400).json({ success: false, error: error.message });
 });
 
-app.use((req, res, next) => {
-  if (req.originalUrl === '/favicon.ico') {
-    return res.status(204).end();
-  }
-  next();
-});
 
 
 // Log environment variables
